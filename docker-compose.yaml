@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: mysql910
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_USER: info910
+      MYSQL_PASSWORD: passw0rd
+      MYSQL_TCP_PORT: 3307
+      MYSQL_DATABASE: info910
+    ports:
+      - 3307:3307
+    expose:
+      - 3307
